@@ -37,3 +37,52 @@ else if(playerInput == '3'){
 }
 
 printMessage('Twój ruch to: ' + playerMove);
+
+if( computerMove == 'kamień' && playerMove == 'papier'){
+  printMessage('Ty wygrywasz!');
+}
+
+else if( computerMove == 'nożyce' && playerMove == 'kamień'){
+  printMessage('Ty wygrywasz!');
+}
+
+else if( computerMove == 'papier' && playerMove == 'nożyce'){
+  printMessage('Ty wygrywasz!');
+}
+
+else if (argComputerMove == 'papier' && argPlayerMove == 'kamień') {
+			printMessage('Komputer wygrywa!');
+		}
+
+else if (argComputerMove == 'nożyce' && argPlayerMove == 'papier') {
+			printMessages('Komputer wygrywa!');
+		}
+
+else if (argComputerMove == 'kamień' && argPlayerMove == 'nożyce') {
+			printMessage('Komputer wygrywa!');
+		}
+
+else if (argComputerMove == 'papier' && argPlayerMove == 'papier') {
+			printMessage('Mamy remis!');
+		}
+
+else if (argComputerMove == 'nożyce' && argPlayerMove == 'nożyce') {
+			printMessage('Mamy remis!');
+		}
+
+else if (argComputerMove == 'kamień' && argPlayerMove == 'kamień') {
+			printMessage('Mamy remis!');
+
+		}
+
+else if (argComputerMove == 'kamień' && argPlayerMove == 'nieznany ruch') {
+				printMessage('Powtórz ruch gracza');
+			}
+
+else if (argComputerMove == 'papier' && argPlayerMove == 'nieznany ruch') {
+				printMessage('Powtórz ruch gracza');
+			}
+
+else if (argComputerMove == 'nożyce' && argPlayerMove == 'nieznany ruch') {
+				printMessage('Powtórz ruch gracza');
+			}
