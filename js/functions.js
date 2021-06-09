@@ -19,7 +19,7 @@ function getMoveName(argMoveId){
 		return 'papier';
 	}
 	else {
-		printMessages('Nie znam ruchu o id ' + argMoveId + '.');
+		printMessage('Nie znam ruchu o id ' + argMoveId + '.');
 		return 'nieznany ruch';
 	}
 }
@@ -40,7 +40,7 @@ if ((argComputerMove == 'papier' && argPlayerMove == 'kamień') ||
     printMessage('Komputer wygrywa!');
   }
 
-if (argComputerMove == argPlayerMove) || {
+if (argComputerMove == argPlayerMove) {
     printMessage('Mamy remis!');
   }
 
