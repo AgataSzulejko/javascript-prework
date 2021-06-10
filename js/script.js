@@ -1,14 +1,3 @@
-function playGame(playerInput){
-clearMessages();
-let randomNumber = Math.floor;(Math.random() * 3 + 1);
-let computerMove = getMoveName(randomNumber);
-
-printMessage('Mój ruch to: ' + computerMove);
-
-let playerMove = getMoveName(playerInput);
-
-displayResult(computerMove, playerMove);
-}
 
 let playScissors = document.getElementById('play-scissors');
 playScissors.addEventListener('click', function(){

@@ -32,19 +32,23 @@ if ((argComputerMove == 'kamień' && argPlayerMove == 'papier') ||
    (argComputerMove == 'nożyce' && argPlayerMove == 'kamień') ||
    (argComputerMove == 'papier' && argPlayerMove == 'nożyce')) {
     printMessage('Ty wygrywasz!');
-  }
-
-if ((argComputerMove == 'papier' && argPlayerMove == 'kamień') ||
+  } else if ((argComputerMove == 'papier' && argPlayerMove == 'kamień') ||
     (argComputerMove == 'nożyce' && argPlayerMove == 'papier') ||
     (argComputerMove == 'kamień' && argPlayerMove == 'nożyce')) {
     printMessage('Komputer wygrywa!');
-  }
-
-if (argComputerMove == argPlayerMove) {
+  } else {
     printMessage('Mamy remis!');
-  }
-
- if (argPlayerMove == 'nieznany ruch') {
-    printMessage('Powtórz ruch gracza');
 }
+}
+
+function playGame(playerInput){
+clearMessages();
+let randomNumber = Math.floor(Math.random() * 3 + 1);
+let computerMove = getMoveName(randomNumber);
+
+printMessage('Mój ruch to: ' + computerMove);
+
+let playerMove = getMoveName(playerInput);
+
+displayResult(computerMove, playerMove);
 }
