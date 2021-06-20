@@ -1,14 +1,10 @@
-function printMessage(msg){
-	let div = document.createElement('div');
+const printMessage = function(msg){
+const div = document.createElement('div');
 	div.innerHTML = msg;
 	document.getElementById('messages').appendChild(div);
 }
 
-function clearMessages(){
-	document.getElementById('messages').innerHTML = '';
-}
-
-function getMoveName(argMoveId){
+const getMoveName = function(argMoveId){
   if (argMoveId == 1) {
 		return 'kamień';
 	}
@@ -24,10 +20,8 @@ function getMoveName(argMoveId){
 	}
 }
 
-function displayResult(argComputerMove, argPlayerMove) {
-
-	printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
-
+const displayResult = function(argComputerMove, argPlayerMove) {
+printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
 if ((argComputerMove == 'kamień' && argPlayerMove == 'papier') ||
    (argComputerMove == 'nożyce' && argPlayerMove == 'kamień') ||
    (argComputerMove == 'papier' && argPlayerMove == 'nożyce')) {
@@ -41,14 +35,16 @@ if ((argComputerMove == 'kamień' && argPlayerMove == 'papier') ||
 }
 }
 
-function playGame(playerInput){
+const playGame = function playGame(playerInput){
 clearMessages();
-let randomNumber = Math.floor(Math.random() * 3 + 1);
-let computerMove = getMoveName(randomNumber);
-
+const randomNumber = Math.floor(Math.random() * 3 + 1);
+const computerMove = getMoveName(randomNumber);
 printMessage('Mój ruch to: ' + computerMove);
 
-let playerMove = getMoveName(playerInput);
-
+const playerMove = getMoveName(playerInput);
 displayResult(computerMove, playerMove);
+}
+
+const clearMessages = function(){
+	document.getElementById('messages').innerHTML = '';
 }
